@@ -31,7 +31,7 @@ jobs:
 
       - name: Skip tests in CI (temp)
         run: echo "Skipping tests in CI to allow deploy. Fix tests locally later."
-  
+
 
   deploy:
     needs: build
@@ -40,6 +40,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Deploy to Railway
-        uses: railwayapp/railway-action@master
+        uses: railwayapp/actions@v3
         with:
-          railwayToken: ${{ secrets.RAILWAY_API_KEY }}
+          railway-api-key: ${{ secrets.RAILWAY_API_KEY }}
+          service-id: ${{ secrets.RAILWAY_SERVICE_ID }}
+          project-id: ${{ secrets.RAILWAY_PROJECT_ID }}
+  
