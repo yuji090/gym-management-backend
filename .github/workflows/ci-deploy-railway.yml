@@ -45,4 +45,4 @@ jobs:
           railway-api-key: ${{ secrets.RAILWAY_API_KEY }}
           service-id: ${{ secrets.RAILWAY_SERVICE_ID }}
           project-id: ${{ secrets.RAILWAY_PROJECT_ID }}
-  
+
